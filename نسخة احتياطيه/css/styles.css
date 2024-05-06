@@ -5,9 +5,8 @@
 }
 
 body {
-  width: ;
   font-size: 16px;
-  background-color: #CFECEC;
+  background-color: #AFDCEC;
 }
 /** HEADER **/
 #header-nav {
@@ -58,6 +57,9 @@ body {
   clear: both;
   margin-top: -30px;
 }
+#collapsable-nav<.collapse {
+  background: ;
+}
 ul {
   text-align: center;
   font-weight: bold;
@@ -73,11 +75,7 @@ hr {
 /* END HEADER */
 
 /* HOME PAGE */
-.row {
-  margin: auto;
-  width: 100%;
-}
-div h2 {
+div h3 {
   color: #000;
   font-size: 1.5em;
   text-transform: capitalize;
@@ -85,69 +83,19 @@ div h2 {
   text-shadow: 1px 1px 1px #222;
   text-align: center;
 }
-#p h3 {
-  color: blue;
+
+#p h4 {
+  color: #000;
   font-size: 1.5em;
   text-transform: capitalize;
+  text-shadow: 1px 1px 1px #222;
   text-align: center;
 }
+
 #p {
-  background-color: #AFC7C7;
-  margin-right: 19px;
-  margin-bottom: 30px;
+  margin: 10px;
+  border: 1px solid black;
 }
-/* END HOME PAGE */
-
-/* SINGLE PAGE */
-#Chicken-tile1 {
-  margin-top: 20px;
-  padding: 10px 20px 20px;
-}
-
-@media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-    float: left;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-  .col-md-11 {
-    width: 91.66666667%;
-  }
-  .col-md-10 {
-    width: 83.33333333%;
-  }
-  .col-md-9 {
-    width: 75%;
-  }
-  .col-md-8 {
-    width: 66.66666667%;
-  }
-  .col-md-7 {
-    width: 58.33333333%;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  .col-md-5 {
-    width: 41.66666667%;
-  }
-  .col-md-4 {
-    width: 31%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-  .col-md-1 {
-    width: 8.33333333%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
@@ -157,10 +105,8 @@ div h2 {
     height: 40px;
   }
   .navbar-brand h1 { /* Restaurant name */
-    margin-left: 30px;
     padding-top: 15px;
     font-size: 5vw; /* 1vw = 1% of viewport width */
-  }
 
 
 
