@@ -161,6 +161,7 @@ div h2 {
     padding-top: 15px;
     font-size: 5vw; /* 1vw = 1% of viewport width */
   }
+}
 
 
 
@@ -171,4 +172,5 @@ div h2 {
     padding-top: 5px;
     font-size: 6vw;
   }
+}
   /* End Header */
