@@ -30,29 +30,31 @@ function upDate(previewPic){
        imageDiv.innerHTML = 'Hover over an image below to display here.';
        }
 
-const images = [
-   'images/CoastalHeadland.webp',
-   'images/CoastalHomes.webp',
-   'images/CoastalRoad.webp',
-   'images/CoastChalets.webp',
-   'images/GreenCoast.webp',
-   'images/PurpleCoast.webp'
-];
+   const images = [
+      { src: 'images/CoastalHeadland.webp', alt: 'A coastal headland view' },
+      { src: 'images/CoastalHomes.webp', alt: 'Homes along the coast' },
+      { src: 'images/CoastalRoad.webp', alt: 'A coastal road' },
+      { src: 'images/CoastChalets.webp', alt: 'Chalets on the coast' },
+      { src: 'images/GreenCoast.webp', alt: 'A green coastal area' },
+      { src: 'images/PurpleCoast.webp', alt: 'A purple-tinted coastal scene' }
+   ];
 
 function getRandomImage(array) {
-   const randomIndex = Math.floor(Math.random() * array.length);
+      const randomIndex = Math.floor(Math.random() * array.length);
    return array[randomIndex];
-}
+   }
 
 function displayRandomImage() {
    const container = document.getElementById('imageContainer');
-   const randomImageSrc = getRandomImage(images);
+   const randomImage = getRandomImage(images);
 
    const img = document.createElement('img');
-   img.src = randomImageSrc;
+   img.src = randomImage.src;
+   img.alt = randomImage.alt;
    img.tabIndex = 0;
    container.appendChild(img);
-}
+   }
+     
 
 
 window.onload = displayRandomImage;
@@ -60,19 +62,19 @@ window.onload = displayRandomImage;
 document.addEventListener('DOMContentLoaded', () => {
    const imageContainerIds = ['image1', 'image2', 'image3'];
    const images = [
-      'images/CoastalHeadland.webp',
-      'images/CoastalHomes.webp',
-      'images/CoastalRoad.webp',
-      'images/CoastChalets.webp',
-      'images/GreenCoast.webp',
-      'images/PurpleCoast.webp'
+       { src: 'images/CoastalHeadland.webp', alt: 'A coastal headland view' },
+       { src: 'images/CoastalHomes.webp', alt: 'Homes along the coast' },
+       { src: 'images/CoastalRoad.webp', alt: 'A coastal road' },
+       { src: 'images/CoastChalets.webp', alt: 'Chalets on the coast' },
+       { src: 'images/GreenCoast.webp', alt: 'A green coastal area' },
+       { src: 'images/PurpleCoast.webp', alt: 'A purple-tinted coastal scene' }
    ];
 
    function getRandomImages(num, sourceArray) {
        let result = [];
        let tempArray = [...sourceArray];
        for (let i = 0; i < num; i++) {
-           console.log("Image "+ i)
+           console.log("Image " + i)
            const randomIndex = Math.floor(Math.random() * tempArray.length);
            result.push(tempArray[randomIndex]);
            tempArray.splice(randomIndex, 1);
@@ -82,10 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
    const randomImages = getRandomImages(3, images);
 
-   randomImages.forEach((image, index) => {
+   randomImages.forEach((imageObject, index) => {
        const imageContainer = document.getElementById(imageContainerIds[index]);
        const imgElement = document.createElement('img');
-       imgElement.src = image;
+       imgElement.src = imageObject.src;
+       imgElement.alt = imageObject.alt;
        imgElement.tabIndex = 0;
        imageContainer.appendChild(imgElement);
    });
