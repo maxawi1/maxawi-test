@@ -91,15 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-   const gridContainer = document.getElementById('grid-container1');
-   if (gridContainer !== null) {
-       const gridItems = gridContainer.getElementsByClassName('preview');
-       for (let i = 0; i < gridItems.length; i++) {
-           gridItems[i].setAttribute('tabindex', '0');
-       }
-   }
-});
 
 
  
