@@ -78,6 +78,9 @@ figure {
     figure {
         border-radius: 0;
     }
+    figcaption {
+        margin-bottom: 0;
+    }
     .grid figure:nth-child(3n) {
         grid-column: span 2;
     }
