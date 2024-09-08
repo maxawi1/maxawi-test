@@ -270,6 +270,9 @@ max-height: 100%;
 box-shadow: -4px 4px 9px 0px black;
 background-color: #727171;
 }
+/* .image:nth-child(3) {
+    margin-bottom: 50px;
+} */
 .photo img {
 width: 100%;
 }
@@ -293,12 +296,17 @@ font-style: oblique;
 margin-bottom: 10px;
 display: flex;
 gap: 3%;
+width: 50%;
+height: 150px;
 position: relative;
+font-size: .9em;
 }
+
 .image1 div {
 width: 100%;
 background-color: #727171;
 box-shadow: -4px 4px 9px 0px black;
+overflow: hidden;
 }
 .photo1 img {
 width: 40%;
@@ -680,6 +688,8 @@ background-color: #113010;
     margin-bottom: 10px;
     display: flex;
     gap: 3%;
+    width: 100%;
+    margin-bottom: 30px;
 }
 .footer1 {
     display: block;
@@ -781,7 +791,32 @@ ul {
 .responsive-image {
     background-image: url('../images/ads.webp');
 }
+.Brand {
+    display: block;
+    background-image: url('../images/ads2.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 340px;
+    overflow: auto;
 }
+.Brand img{
+    display: none;
+}
+}
+.Brand1 {
+    display: block;
+    background-image: url('../images/ads2.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 340px;
+    overflow: auto;
+}
+.Brand1 img{
+    display: none;
+}
+
 
 @media screen and (max-width: 772px) {
 .swiper {
@@ -822,9 +857,15 @@ ul {
 
 
 .image1 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     display: flex;
     gap: 3%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.image1 img {
+    
 }
 .footer1 {
     display: block;
@@ -879,6 +920,9 @@ ul {
 .single2 {
     display: block;
     width: 90%;
+}
+.tandd {
+    font-size: .8em;
 }
 }
     
